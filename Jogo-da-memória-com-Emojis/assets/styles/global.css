@@ -4,7 +4,6 @@
   box-sizing: border-box;
   outline: none;
   font-family: monospace;
-  color: #fff;
 }
 body {
   display: flex;
@@ -17,4 +16,5 @@ body {
     rgba(0, 0, 0, 1) 41%,
     rgba(65, 24, 77, 1) 82%
   );
+  user-select: none;
 }

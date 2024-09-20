@@ -38,21 +38,41 @@ h2 {
 }
 
 .game {
-  border: solid 1px#fff;
-  width: 700px;
-  height: 500px;
+  width: 50vw;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   transform-style: preserve-3d;
   perspective: 500px;
+  padding: 20px;
 }
 .item {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  font-size: 3em;
+  transform: rotateY(180deg);
+  transition: 0.25s;
+}
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #404040;
+  transition: 0.25s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+.item.boxOpen {
+  transform: rotateY(0deg);
+}
+.boxOpen::after,
+.boxMatch::after {
+  transform: rotateY(180deg);
 }
